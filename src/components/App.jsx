@@ -60,7 +60,7 @@ export class App extends Component {
     if (!returnedContacnts) {
       return;
     }
-    if (returnedContacnts.length > 1) {
+    if (returnedContacnts.length > 0) {
       this.setState({ contacts: returnedContacnts });
     }
   }
