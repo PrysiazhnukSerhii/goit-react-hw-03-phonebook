@@ -57,6 +57,9 @@ export class App extends Component {
   componentDidMount() {
     let returnedContacnts = JSON.parse(localStorage.getItem('contacts'));
 
+    if (!returnedContacnts) {
+      return;
+    }
     if (returnedContacnts.length > 1) {
       this.setState({ contacts: returnedContacnts });
     }
